@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>متجري البسيط</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>متجري</h1>
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="منتج 1" />
+        <h3>منتج 1</h3>
+        <p>السعر: 50 ريال</p>
+        <button onclick="addToCart('منتج 1', 50)">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="منتج 2" />
+        <h3>منتج 2</h3>
+        <p>السعر: 80 ريال</p>
+        <button onclick="addToCart('منتج 2', 80)">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x150" alt="منتج 3" />
+        <h3>منتج 3</h3>
+        <p>السعر: 120 ريال</p>
+        <button onclick="addToCart('منتج 3', 120)">أضف إلى السلة</button>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cart-panel">
+    <h2>السلة</h2>
+    <ul id="cart-items"></ul>
+    <p id="total">المجموع: 0 ريال</p>
+    <button onclick="clearCart()">تفريغ السلة</button>
+  </aside>
+
+  <footer>
+    <p>حقوق النشر © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
